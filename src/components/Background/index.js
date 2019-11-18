@@ -5,32 +5,31 @@ import shambalaDanceOff from '../../assets/images/shambala-dance-off.jpeg'
 export const BackgroundImage = styled.div`
   width: 100%;
   position: relative;
-  height: 85vh;
+  height: 750px;
+  top: 150px;
   text-align: center;
-  background-image: url("${props => props.img}");
-  background-repeat: no-repeat;
-  background-size: cover;;
-  background-position: center;
-  z-index: 5;
+  &::after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateZ(-1.5px) scale(2);
+    z-index: -1;
+    background-image: url("${props => props.img}");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+  }
 `;
 
-
-export const LightBackground = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 85vh;
-  background-color: rgba(255,255,255,0.5);
-`;
 
 
 export const HomePageBackgroundImage = () => {
   return (
     <>
-    <BackgroundImage img={shambalaDanceOff}>
-      <LightBackground />
-    </BackgroundImage>
+    <BackgroundImage img={shambalaDanceOff} />
     </>
   );
 };
