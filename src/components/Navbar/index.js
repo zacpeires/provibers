@@ -1,6 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import { MidSizedText } from '../Typography';
+import { HamburgerMenu } from '../Icons';
 
 export const Navbar = styled.nav`
   height: 70px;
@@ -16,9 +18,10 @@ export const Navbar = styled.nav`
   a {
     text-decoration: none;
   }
+  @media (max-width: 415px) {
+    padding: 0 40px;
+  }
 `;
-
-
 
 const TextContainer = styled.div`
   display: flex;
@@ -26,19 +29,27 @@ const TextContainer = styled.div`
   align-items: center;
   width: 100%;
   padding-top: 10px;
+  @media (max-width: 710px) {
+    display: none;
+  }
 `;
 
 export default () => {
   return (
     <Navbar>
       <TextContainer>
-        <MidSizedText>Home</MidSizedText>
-        <MidSizedText>About</MidSizedText>
+        <Link to='/'>
+          <MidSizedText>Home</MidSizedText>
+        </Link>
+        <a href='#about'>
+          <MidSizedText>About</MidSizedText>
+        </a>
         <MidSizedText>Work</MidSizedText>
         <MidSizedText>Clients</MidSizedText>
         <MidSizedText>Contact</MidSizedText>
         <MidSizedText>Vibes Blog</MidSizedText>
       </TextContainer>
+      <HamburgerMenu />
     </Navbar>
   );
 };
