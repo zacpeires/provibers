@@ -180,7 +180,7 @@ export default () => {
             Through genuine connections and a unique approach to events, The
             Provibers
             <ShadowText>
-              give life to all parties, deliver fun to festival fields and bring
+            {' '}give life to all parties, deliver fun to festival fields and bring
               out the very best vibes in brands and brand experiences
             </ShadowText>
             - The Provibers provide the vibe.

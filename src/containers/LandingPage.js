@@ -4,6 +4,7 @@ import { HomePageBackgroundImage } from '../components/Background';
 import About from './About';
 import PastWork from './PastWork';
 import Contact from './Contact';
+import Footer from '../components/Footer';
 
 const ParallaxContainer = styled.div`
   height: 100vh;
@@ -20,6 +21,7 @@ export default () => {
         <About />
         <PastWork />
         <Contact />
+        <Footer />
       </ParallaxContainer>
     </>
   );
