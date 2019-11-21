@@ -5,6 +5,9 @@ const Container = styled.div`
     padding: 35px 18px 40px;
     box-sizing: border-box;
     background-color: white;
+    @media (max-width: 530px) {
+        padding: 35px 18px 5px;
+      }
 `
 
 const FooterText = styled.p`

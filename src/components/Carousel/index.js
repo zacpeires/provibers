@@ -5,15 +5,27 @@ const Container = styled.div`
   width: 1000px;
   height: 310px;
   overflow: hidden;
-  box-sizing: border-box;
-  padding-left: 10px;
+  @media (max-width: 1050px) {
+      width: 750px;
+  }
+  @media (max-width: 850px) {
+      width: 500px;
+  }
+  @media (max-width: 530px) {
+    width: 360px;
+    height: 250px;
+}
 `;
 
 const Image = styled.div`
   height: 100%;
   min-width: 240px;
   background-color: white;
-  margin-right: 10px;
+  margin-right: 5px;
+  margin-left: 5px;
+  @media(max-width: 530px) {
+    min-width: 170px;
+}
 `;
 
 const InternalImageContainer = styled.div`
@@ -24,34 +36,33 @@ const InternalImageContainer = styled.div`
   transition: 0.2s transform;
 `;
 
-const PinkImage = styled.div`
-  height: 100%;
-  min-width: 240px;
-  background-color: pink;
-  margin-right: 10px;
-`;
 
 export default () => {
   const [index, setIndex] = useState(0);
+  const imagesAndInfo = [0, 0, 0, 0, 0, 0, 0]
+
+
+  const shiftRight = () => {
+    setIndex(index + 1)
+}
 
 //   setInterval(() =>{
-//       setIndex(index + 1);
+//       shiftRight();
 //   }, 1000)
 
-    const shiftRight = () => {
-        setIndex(index + 1)
-    }
+
 
   return (
     <Container>
       <InternalImageContainer translate={250 * index}>
-        <Image />
-        <Image />
-        <Image />
-        <Image />
-        <PinkImage />
-        <PinkImage />
-        <PinkImage />
+          {
+              imagesAndInfo.map((image, index) => {
+                  console.log(index)
+                  return (
+                    <Image />
+                  )
+              })
+          }
       </InternalImageContainer>
     </Container>
   );

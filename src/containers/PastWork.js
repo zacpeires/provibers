@@ -109,19 +109,19 @@ export default () => {
             <EventTitle>Snowbombing</EventTitle>
           </EventBox>
         </Link>
-        <Link to='elrow'>
+        <Link to='elrow-town'>
           <EventBox>
             <EventImage></EventImage>
             <EventTitle>Elrow Town</EventTitle>
           </EventBox>
         </Link>
-        <Link to='/festival-vibes'>
+        <Link to='/festivals'>
           <EventBox>
             <EventImage></EventImage>
             <EventTitle>Festival Vibes</EventTitle>
           </EventBox>
         </Link>
-        <Link to='/gamesys-party'>
+        <Link to='/gamesys'>
           <EventBox>
             <EventImage></EventImage>
             <EventTitle>Gamesys Party</EventTitle>
