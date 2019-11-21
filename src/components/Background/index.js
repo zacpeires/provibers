@@ -17,12 +17,14 @@ export const BackgroundImage = styled.div`
     left: 0;
     transform: translateZ(-1.5px) scale(2);
     z-index: -1;
-    background-image: url("${props => props.img}");
+    background-color: red;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
   }
 `;
+
+//     // background-image: url("${props => props.img}");
 
 
 

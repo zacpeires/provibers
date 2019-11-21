@@ -6,15 +6,15 @@ const Container = styled.div`
   height: 310px;
   overflow: hidden;
   @media (max-width: 1050px) {
-      width: 750px;
+    width: 750px;
   }
   @media (max-width: 850px) {
-      width: 500px;
+    width: 500px;
   }
   @media (max-width: 530px) {
     width: 360px;
     height: 250px;
-}
+  }
 `;
 
 const Image = styled.div`
@@ -23,9 +23,9 @@ const Image = styled.div`
   background-color: white;
   margin-right: 5px;
   margin-left: 5px;
-  @media(max-width: 530px) {
+  @media (max-width: 530px) {
     min-width: 170px;
-}
+  }
 `;
 
 const InternalImageContainer = styled.div`
@@ -36,33 +36,25 @@ const InternalImageContainer = styled.div`
   transition: 0.2s transform;
 `;
 
-
 export default () => {
   const [index, setIndex] = useState(0);
-  const imagesAndInfo = [0, 0, 0, 0, 0, 0, 0]
-
+  const imagesAndInfo = [0, 0, 0, 0, 0, 0, 0];
 
   const shiftRight = () => {
-    setIndex(index + 1)
-}
+    setIndex(index + 1);
+  };
 
-//   setInterval(() =>{
-//       shiftRight();
-//   }, 1000)
-
-
+  //   setInterval(() =>{
+  //       shiftRight();
+  //   }, 1000)
 
   return (
     <Container>
       <InternalImageContainer translate={250 * index}>
-          {
-              imagesAndInfo.map((image, index) => {
-                  console.log(index)
-                  return (
-                    <Image />
-                  )
-              })
-          }
+        {imagesAndInfo.map((image, index) => {
+          console.log(index);
+          return <Image />;
+        })}
       </InternalImageContainer>
     </Container>
   );

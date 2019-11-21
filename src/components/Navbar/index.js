@@ -44,9 +44,13 @@ export default () => {
         <a href='#about'>
           <MidSizedText>About</MidSizedText>
         </a>
+        <a href="#work">
         <MidSizedText>Work</MidSizedText>
+        </a>
         <MidSizedText>Clients</MidSizedText>
+        <a href="#contact">
         <MidSizedText>Contact</MidSizedText>
+        </a>
         <MidSizedText>Vibes Blog</MidSizedText>
       </TextContainer>
       <HamburgerMenu />

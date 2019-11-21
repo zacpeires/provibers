@@ -12,6 +12,11 @@ const Container = styled.div`
   justify-content: center;
   overflow: hidden;
   text-align: center;
+  position: relative;
+  span {
+    position: absolute; 
+    top: -70px;
+  }
 `;
 
 const Row = styled.div`
@@ -76,8 +81,8 @@ const EventTitle = styled.p`
 export default () => {
   return (
     <Container>
+      <span id="work"/>
       <Title>What We've Done</Title>
-
       <Row>
         <Link to='/haig-house-party'>
           <EventBox>

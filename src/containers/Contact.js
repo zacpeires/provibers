@@ -10,8 +10,13 @@ const Container = styled.div`
   box-sizing: border-box;
   padding: 155px 85px;
   background-color: #38dcc8;
+  position: relative;
   @media (max-width: 415px) {
     padding 110px 55px 95px;
+  }
+  span {
+    position: absolute;
+    top: -70px;
   }
 `;
 
@@ -94,6 +99,7 @@ const SocialsBox = styled.div`
 export default () => {
   return (
     <Container>
+      <span id="contact"/>
       <TitleBox>
         <LargeTitle>Get In Touch</LargeTitle>
       </TitleBox>

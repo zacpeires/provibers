@@ -7,9 +7,14 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  position relative;
   #dashed-line {
     width: 100%;
     height: 25px;
+  }
+  span {
+    position: absolute;
+    top: -70px;
   }
 `;
 
@@ -168,6 +173,7 @@ const ShadowText = styled.p`
 export default () => {
   return (
     <Container>
+      <span id="about"/>
       <Row>
         <Video />
         <AboutTextContainer>
