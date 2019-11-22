@@ -1,13 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
-import shambalaDanceOff from '../../assets/images/shambala-dance-off.jpeg'
 
 export const BackgroundImage = styled.div`
   width: 100%;
   position: relative;
   height: 750px;
-  top: 150px;
   text-align: center;
+  ${props => {
+    if (props.titlePicture) {
+      return`
+        top: 310px;
+      `
+    }
+  }}
   &::after {
     content: " ";
     position: absolute;
@@ -15,23 +20,20 @@ export const BackgroundImage = styled.div`
     right: 0;
     bottom: 0;
     left: 0;
-    transform: translateZ(-1.5px) scale(2);
-    z-index: -1;
-    background-color: red;
+    transform: translateZ(-3.5px) scale(3);
+    z-index: ${props => props.zIndex}
+    background-image: url("${props => props.img}");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
   }
 `;
 
-//     // background-image: url("${props => props.img}");
 
-
-
-export const HomePageBackgroundImage = () => {
+export const HomePageBackgroundImage = ({img, titlePicture, zIndex}) => {
   return (
     <>
-    <BackgroundImage img={shambalaDanceOff} />
+    <BackgroundImage zIndex={zIndex} titlePicture={ titlePicture ? titlePicture : null} img={img} />
     </>
-  );
+  )
 };
